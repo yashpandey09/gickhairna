@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>G.I.C Khairna — School Website</title>
+  <style>
+    :root{
+      --green:#1aa273;
+      --teal:#1aa273;
+      --accent:#2fa08a;
+      --bg:#f6fbfb;
+      --card:#ffffff;
+      --muted:#6b6b6b;
+      --header-h:70px;
+    }
+    *{box-sizing:border-box;font-family:Inter,Segoe UI,Arial;margin:0;padding:0}
+    body{background:var(--bg);color:#123;}
+    header{height:var(--header-h);background:linear-gradient(90deg,var(--teal),#1bb089);display:flex;align-items:center;padding:0 20px;gap:20px}
+    header img.logo{height:52px;border-radius:8px}
+    header h1{font-size:20px;color:#fff;letter-spacing:0.6px}
+    nav{margin-left:auto}
+    nav a{color:#fff;text-decoration:none;padding:10px 14px;border-radius:6px;margin-left:6px;display:inline-block}
+    nav a.active,nav a:hover{background:rgba(255,255,255,0.12)}
+
+    .hero{max-width:1000px;margin:18px auto;padding:18px;background:linear-gradient(180deg,#fff,#f8fffb);border-radius:12px;box-shadow:0 6px 30px rgba(0,0,0,0.08);overflow:hidden}
+    .hero .banner{width:100%;height:220px;background-size:cover;background-position:center;border-radius:8px;display:flex;align-items:flex-end;padding:16px}
+    .hero h2{color:var(--teal);margin-bottom:6px}
+    .cols{display:flex;gap:18px}
+    .left{flex:1}
+    .right{width:360px}
+
+    .panel{background:var(--card);padding:14px;border-radius:10px;margin-bottom:12px}
+    .folders{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    .folder{background:linear-gradient(180deg,#f7fff9,#e9fff1);padding:12px;border-radius:10px;border:1px solid #e6f6f0;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:8px}
+    .folder h3{font-size:14px;color:#0b6b4c}
+    .folder small{color:var(--muted)}
+
+    .content-area{max-width:1000px;margin:10px auto}
+    .folder-page{display:none}
+    .folder-page.active{display:block}
+
+    .uploader{display:flex;gap:8px;align-items:center}
+    .uploader input[type=file]{padding:6px}
+    .file-list{margin-top:12px}
+    .file-item{display:flex;justify-content:space-between;align-items:center;padding:8px;border-radius:8px;border:1px dashed #e6eee8;margin-bottom:8px;background:#fcfffb}
+    .file-item button{background:var(--teal);color:#fff;border:none;padding:6px 10px;border-radius:6px;cursor:pointer}
+
+    footer{margin:24px auto;text-align:center;color:var(--muted)}
+
+    @media(max-width:900px){.cols{flex-direction:column}.right{width:auto}.folders{grid-template-columns:repeat(2,1fr)}}
+  </style>
+</head>
+<body>
+  <header>
+    <!-- NEW LOGO IMAGE -->
+    <img class="logo" src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=300" alt="School Logo">
+    <h1>G.I.C Khairna</h1>
+    <nav>
+      <a href="#home" class="navlink active" data-target="home">Home</a>
+      <a href="#our" class="navlink" data-target="our-school">Our School</a>
+      <a href="#downloads" class="navlink" data-target="downloads">Resources</a>
+      <a href="#contact" class="navlink" data-target="contact">Contact</a>
+    </nav>
+  </header>
+
+  <main class="content-area">
+    <section id="home" class="panel folder-page active">
+      <div class="hero">
+        <!-- NEW BANNER IMAGE -->
+        <div class="banner" style="background-image: url('https://images.unsplash.com/photo-1503676382389-4809596d5290?w=1200');">
+          <div style="background:rgba(255,255,255,0.9);padding:10px;border-radius:8px">
+            <h2>Welcome to G.I.C Khairna</h2>
+            <div style="color:#2b6b4f">A serene school located in the heart of the hills — surrounded by trees and fresh air.</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top:12px;display:flex;gap:14px;flex-wrap:wrap">
+        <div class="panel" style="width:100%;margin-bottom:16px">
+          <h3>Gallery</h3>
+          <div style="display:flex;gap:12px;flex-wrap:wrap">
+            <img src="https://images.unsplash.com/photo-1571260899304-425eee4c7efc?w=800" style="width:48%;border-radius:10px;box-shadow:0 4px 12px rgba(0,0,0,0.1)">
+            <img src="https://images.unsplash.com/photo-1516979187457-637abb4f9353?w=800" style="width:48%;border-radius:10px;box-shadow:0 4px 12px rgba(0,0,0,0.1)">
+          </div>
+        </div>
+
+        <div style="flex:1;min-width:260px" class="panel">
+          <h3>About Our School</h3>
+          <p>Our school sits among gentle hills and tall trees, providing a calm and healthy environment for students. We focus on academic excellence, discipline, and extracurricular growth.</p>
+        </div>
+
+        <div style="width:320px" class="panel">
+          <h3>Quick Links</h3></h3>
+          <ul>
+            <li>Admissions</li>
+            <li>Academic Calendar</li>
+            <li>Contact Administration</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="our-school" class="panel folder-page">
+      <h2>Our Campus</h2>
+      <!-- NEW CAMPUS PHOTO -->
+      <img src="https://images.unsplash.com/photo-1596495577886-d920f1fb7238?w=1200" style="width:100%;border-radius:12px;margin:12px 0;box-shadow:0 4px 12px rgba(0,0,0,0.1)">
+      <p>G.I.C Khairna offers spacious classrooms, play fields, and nature trails. Students enjoy learning in a clean and green campus, ideal for both academics and physical activities.</p> spacious classrooms, play fields, and nature trails. Students enjoy learning in a clean and green campus, ideal for both academics and physical activities.</p>
+    </section>
+
+    <section id="downloads" class="panel folder-page">
+      <h2>Download Resources</h2>
+      <p>Choose your class folder below and click to open. You can upload sample papers or notes; everything is stored locally in your browser (only visible on this device).</p>
+
+      <div class="folders" id="foldersContainer"></div>
+      <div id="folderPages"></div>
+    </section>
+
+    <section id="contact" class="panel folder-page">
+      <h2>Contact</h2>
+      <p><strong>Principal Sir (Mobile):</strong> 9412101079</p>
+      <p><strong>School Email:</strong> www.gickharina.com</p>
+      <br>
+      <p>Made by Yash Pandey — For enquiries, contact the school office or the project creator.</p>
+    </section>
+  </main>
+
+  <footer>
+    Made by Yash Pandey
+  </footer>
+
+  <script>
+    const folderNames = [
+      'Class 9th',
+      'Class 10th',
+      'Class 11th',
+      'Class 12th',
+      'Class 10 Sample Papers',
+      'Class 12 Sample Papers'
+    ];
+
+    const foldersContainer = document.getElementById('foldersContainer');
+    const folderPages = document.getElementById('folderPages');
+
+    function makeId(name){return name.replace(/\s+/g,'_').toLowerCase();}
+    function loadFiles(key){try{const raw=localStorage.getItem('folder_files_'+key);return raw?JSON.parse(raw):[]}catch(e){return []}}
+    function saveFiles(key,arr){localStorage.setItem('folder_files_'+key,JSON.stringify(arr));}
+
+    folderNames.forEach(name=>{
+      const id=makeId(name);
+      const tile=document.createElement('div'); tile.className='folder';
+      tile.innerHTML=`<svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 7C3 5.89543 3.89543 5 5 5H9L11 7H19C20.1046 7 21 7.89543 21 9V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V7Z" stroke="#0b6b4c" stroke-width="1.2" fill="#e9fff1"/></svg><h3>${name}</h3><small>Click to open</small>`;
+      tile.addEventListener('click',()=>openFolder(id));
+      foldersContainer.appendChild(tile);
+
+      const page=document.createElement('div'); page.className='panel folder-page'; page.id='page_'+id;
+      page.innerHTML=`<h3>${name}</h3>
+        <div class="uploader">
+          <input type="file" id="file_${id}" />
+          <button data-id="${id}" class="uploadBtn">Upload</button>
+          <button data-id="${id}" class="clearBtn">Clear All</button>
+        </div>
+        <div class="file-list" id="list_${id}"></div>
+        <div style="margin-top:8px;color:#666;font-size:13px">Note: Files are stored locally in your browser. They will remain on this device only.</div>`;
+      folderPages.appendChild(page);
+
+      renderFileList(id);
+    });
+
+    document.querySelectorAll('.navlink').forEach(a=>{
+      a.addEventListener('click',e=>{
+        e.preventDefault(); document.querySelectorAll('.navlink').forEach(n=>n.classList.remove('active')); a.classList.add('active');
+        const target=a.dataset.target;
+        document.querySelectorAll('.folder-page').forEach(s=>s.classList.remove('active'));
+        document.getElementById(target).classList.add('active');
+      });
+    });
+
+    document.addEventListener('click',e=>{
+      if(e.target.classList.contains('uploadBtn')){
+        const id=e.target.dataset.id; const input=document.getElementById('file_'+id);
+        if(input.files.length===0){alert('Choose a file first');return}
+        const f=input.files[0]; const reader=new FileReader();
+        reader.onload=()=>{
+          const arr=loadFiles(id);
+          arr.push({name:f.name,data:reader.result,time:Date.now()});
+          saveFiles(id,arr); renderFileList(id); input.value='';
+          alert('File uploaded to folder: '+id);
+        };
+        reader.readAsDataURL(f);
+      }
+      if(e.target.classList.contains('clearBtn')){
+        const id=e.target.dataset.id; if(confirm('Clear all files in this folder?')){saveFiles(id,[]);renderFileList(id);} }
+      if(e.target.classList.contains('downloadBtn')){
+        const id=e.target.dataset.folder; const idx=+e.target.dataset.index; const arr=loadFiles(id); const file=arr[idx];
+        const link=document.createElement('a'); link.href=file.data; link.download=file.name; document.body.appendChild(link); link.click(); link.remove();
+      }
+      if(e.target.classList.contains('deleteBtn')){
+        const id=e.target.dataset.folder; const idx=+e.target.dataset.index; const arr=loadFiles(id); arr.splice(idx,1); saveFiles(id,arr); renderFileList(id);
+      }
+    });
+
+    function renderFileList(id){
+      const list=document.getElementById('list_'+id); list.innerHTML=''; const arr=loadFiles(id);
+      if(arr.length===0){list.innerHTML='<div style="color:#777;padding:12px">No files yet. Use the upload button above.</div>'; return}
+      arr.forEach((f,i)=>{
+        const item=document.createElement('div'); item.className='file-item';
+        item.innerHTML=`<div style="max-width:70%"><strong>${f.name}</strong><div style="font-size:12px;color:#666">Uploaded: ${new Date(f.time).toLocaleString()}</div></div>
+          <div style="display:flex;gap:8px"><button class="downloadBtn" data-folder="${id}" data-index="${i}">Download</button><button class="deleteBtn" data-folder="${id}" data-index="${i}">Delete</button></div>`;
+        list.appendChild(item);
+      });
+    }
+
+    function openFolder(id){
+      document.querySelectorAll('.folder-page').forEach(s=>s.classList.remove('active'));
+      document.getElementById('page_'+id).classList.add('active');
+      document.querySelectorAll('.navlink').forEach(n=>n.classList.remove('active'));
+      document.querySelector('[data-target="downloads"]').classList.add('active');
+      document.getElementById('page_'+id).scrollIntoView({behavior:'smooth'});
+    }
+
+    (function(){
+      const params=new URLSearchParams(location.search);
+      const cls=params.get('class'); if(cls){openFolder(cls);} })();
+
+  </script>
+</body>
+</html>
